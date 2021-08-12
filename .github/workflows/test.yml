@@ -31,7 +31,7 @@ jobs:
       run: ls
 
     - name: show readme.md
-      run: cat readme.md
+      run: cat README.md
 
     - name: Protect
       run: echo "79e29bd433253fac11899059d59cebe3 readme.md" | md5sum -c -

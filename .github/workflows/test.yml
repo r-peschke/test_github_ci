@@ -34,4 +34,4 @@ jobs:
       run: cat README.md
 
     - name: Protect README.md
-      run: echo "79e29bd433253fac11899059d59cebe3 README.md" | md5sum -c -
+      run: echo "2497b778264ccfb2d98bd6a01d6eda62 README.md" | md5sum -c -

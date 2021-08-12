@@ -23,6 +23,12 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v2
+      
+    - name: env
+      run: env
+      
+    - name: list
+      run: ls
 
     - name: show readme.md
       run: cat readme.md

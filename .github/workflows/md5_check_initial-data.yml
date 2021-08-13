@@ -1,0 +1,22 @@
+---
+name: Prevent manual changes of initial-data.json without md5 hash
+on:
+  push:
+  pull_request:
+    paths:
+      - "initial-data.json"
+env:
+  PYTHON_VERSION: 3.9.6
+jobs:
+  validate-data:
+    name: Validate example-data.json and initial-data.json
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Show hash for initial-data.json
+        run: md5sum docker/initial-data.json
+
+      - name: Validate and protect initial-data.json
+        run: echo "79e29bd433253fac11899059d59cebe3 docker/initial-data.json" | md5sum -c -

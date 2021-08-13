@@ -3,7 +3,7 @@ name: Prevent manual changes of initial-data.json without md5 hash
 on:
   pull_request:
     paths:
-      - "initial-data.json"
+      - "docker/initial-data.json"
 env:
   PYTHON_VERSION: 3.9.6
 jobs:

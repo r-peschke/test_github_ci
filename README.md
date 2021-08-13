@@ -1,2 +1,4 @@
 # test_github_ci
-uand more
+changed and committed directly to branch
+changed with pull request
+work on conflict

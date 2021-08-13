@@ -16,16 +16,25 @@ jobs:
         python-version: ${{ env.PYTHON_VERSION }}
 
     - name: cat this file
-      run: cat .github/workflow/test.yml
+      run: cat .github/workflows/test.yml
 
   job2:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
       uses: actions/checkout@v2
+      
+    - name: env
+      run: env
+      
+    - name: list
+      run: ls
 
     - name: show readme.md
-      run: cat readme.md
+      run: cat README.md
 
-    - name: Protect
-      run: echo "79e29bd433253fac11899059d59cebe3 readme.md" | md5sum -c -
+    - name: md5sum README.md
+      run: md5sum README.md
+
+    - name: Protect README.md
+      run: echo "22b3f2f6e44f56a909486a5bd1d0fe92 README.md" | md5sum -c -

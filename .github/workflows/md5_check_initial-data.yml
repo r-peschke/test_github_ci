@@ -2,6 +2,8 @@
 name: Prevent manual changes of initial-data.json without md5 hash
 on:
   push:
+    paths:
+      - "docker/initial-data.json"
   pull_request:
     paths:
       - "docker/initial-data.json"
